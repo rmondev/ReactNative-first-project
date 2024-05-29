@@ -1,35 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, FlatList } from 'react-native';
 import React, {useState} from 'react';
+import DayListItem from './src/components/core/DayListItem';
 
 
 export default function App() {
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-
-  
+  const days = Array.from({ length: 24 }, (_, i) => i+1);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textHeader}>Hello World</Text>
-      <Text style={styles.textHeader}>#rmon.dev Hello</Text>
-      <TextInput 
-      placeholder='Enter First Name' 
-      style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 200, margin: 10, padding :8}}
-      defaultValue={firstName}
-      onChangeText={text => setFirstName(text)}
-      />
-      <TextInput 
-      placeholder='Enter Last Name' 
-      style={{height: 40, borderColor: 'gray', borderWidth: 1, width: 200, margin: 10, padding :8}} 
-      defaultValue={lastName}
-      onChangeText={text => setLastName(text)}
-      
+
+      <FlatList 
+        data={days}
+        contentContainerStyle={styles.content}
+        columnWrapperStyle={styles.column}
+        numColumns={3}
+        renderItem={({ item })=><DayListItem day={item}/>}
       />
 
-      <Text>First Name: {firstName}</Text>
-      <Text>Last Name: {lastName}</Text>
+     
       <StatusBar style="auto" />
     </View>
   );
@@ -39,11 +29,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    gap: 10
   },
-  textHeader:{
-    fontSize: 24,
-    fontWeight: 'bold',
+  
+  content:{
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    gap: 10,
+    padding: 16,
+    paddingTop: 48,
+  },
+  
+  column:{
+    gap: 10
   }
+
 });
