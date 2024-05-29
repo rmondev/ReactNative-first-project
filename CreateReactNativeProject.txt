@@ -1,0 +1,4 @@
+New React Native Project Using Expo
+===================================
+
+npx create-expo-app@latest first-project -t
