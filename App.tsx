@@ -6,6 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hello</Text>
+      <Text>#rmon.dev Hello</Text>
       <StatusBar style="auto" />
     </View>
   );
