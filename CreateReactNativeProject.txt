@@ -3,6 +3,11 @@ New React Native Project Using Expo
 
 npx create-expo-app@latest first-project -t
 
+Adding Expo Router:
+==================
+
+https://docs.expo.dev/router/installation/#manual-installation
+
 Start Android Emulator:
 ===============
 
