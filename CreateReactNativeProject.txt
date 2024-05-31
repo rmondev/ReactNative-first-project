@@ -2,3 +2,9 @@ New React Native Project Using Expo
 ===================================
 
 npx create-expo-app@latest first-project -t
+
+Start Android Emulator:
+===============
+
+emulator -list-avds
+emulator -avd "device"
