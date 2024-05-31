@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, FlatList, ActivityIndicator } from 'react-native';
 import React, {useState, useEffect} from 'react';
-import DayListItem from '../components/core/DayListItem'
+import DayListItem from '@components/core/DayListItem';
 
 
 
