@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
         borderWidth: StyleSheet.hairlineWidth,
         borderColor: '#9b4521',
         borderRadius: 20,
-        aspectRatio: 1
+        aspectRatio: 1,
     },
 
     text:{
         color: '#9b4521',
         fontSize: 50,
-        fontFamily: 'NotoSerifDisplayBold',
+        fontFamily: 'AmaticBold',
     },
 })
 
