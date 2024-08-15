@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, {useEffect} from 'react'
 import { Stack } from 'expo-router'
-import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
+import { useFonts, Inter_900Black, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import { AmaticSC_400Regular, AmaticSC_700Bold} from "@expo-google-fonts/amatic-sc"
 import { NotoSerifDisplay_700Bold} from "@expo-google-fonts/noto-serif-display"
 import * as SplashScreen from 'expo-splash-screen';
@@ -12,6 +12,7 @@ const RootLayout = () => {
 
     const [fontsLoaded, fontError] = useFonts({
         Inter: Inter_900Black,
+        InterSemi: Inter_600SemiBold,
         Amatic: AmaticSC_400Regular,
         AmaticBold: AmaticSC_700Bold,
         NotoSerifDisplayBold: NotoSerifDisplay_700Bold
